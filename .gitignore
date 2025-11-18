@@ -21,3 +21,47 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.swp
+
+# Dependencies
+node_modules/
+vendor/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+*.pyo
+*.class
+*.o
+*.so
+*.exe
+
+# IDE and editor files
+.idea/
+*.swo
+*~
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+
+# Test coverage
+coverage/
+.coverage
+*.cover
+htmlcov/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# OS files
+Thumbs.db
+>>>>>>> f6945342ab987f7a264f483c3f6a1405a3ff773a
