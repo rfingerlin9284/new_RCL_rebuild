@@ -1,0 +1,13 @@
+{
+  "menu_title": "RICK OPERATOR CONSOLE 841921",
+  "items": [
+    { "id": 1, "label": "Start AUTONOMOUS trading mode", "action": "start_autonomous" },
+    { "id": 2, "label": "Pause AUTONOMOUS trading mode", "action": "stop_autonomous" },
+    { "id": 3, "label": "Enter MANUAL trade (Oanda/IBKR paper)", "action": "manual_trade_entry" },
+    { "id": 4, "label": "Run HEALTH CHECK (PIN + imports + router)", "action": "run_health_check" },
+    { "id": 5, "label": "Tail NARRATION log (live view)", "action": "tail_narration" },
+    { "id": 6, "label": "Switch ACTIVE BROKER (Oanda / IBKR)", "action": "switch_broker" },
+    { "id": 7, "label": "Show OPEN POSITIONS summary", "action": "show_positions" },
+    { "id": 8, "label": "Exit OPERATOR console", "action": "exit_console" }
+  ]
+}

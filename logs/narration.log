@@ -1,0 +1,69 @@
+2025-11-13 21:20:20 | INFO | 🟢 RICK SYSTEM STARTING in PAPER_PRACTICE mode with OANDA, IBKR brokers active.
+2025-11-13 21:20:33 | INFO | 📊 STATUS CHECK: Trading mode is PAPER_PRACTICE, system is POWERED_OFF, active brokers are OANDA, IBKR.
+2025-11-14 08:59:59 | INFO | 🟢 RICK SYSTEM STARTING in PAPER_PRACTICE mode with OANDA, IBKR brokers active.
+2025-11-16 10:00:10 | INFO | 👤 MANUAL TRADE REQUESTED: MANUAL_INPUT with parameters: {
+  "input": "Buy 0.001 BTC-USD market trade 841921"
+}
+2025-11-16 10:00:10 | INFO | 👤 MANUAL TRADE REQUESTED: EURUSD with parameters: {
+  "symbol": "EURUSD",
+  "direction": "buy",
+  "quantity": 0.001,
+  "entry_price": null,
+  "stop_loss": null,
+  "take_profit": null,
+  "risk_percent": 2.0,
+  "broker": "oanda"
+}
+2025-11-16 10:00:10 | INFO | 🧠 HIVE CONSENSUS on EURUSD: BUY with 78% confidence. Votes: ml_models: 75% | patterns: 81% | regime: 78%
+2025-11-16 10:00:39 | INFO | 👤 MANUAL TRADE REQUESTED: MANUAL_INPUT with parameters: {
+  "input": "Buy 0.001 BTC-USD market trade 841921"
+}
+2025-11-16 10:00:39 | INFO | 👤 MANUAL TRADE REQUESTED: EURUSD with parameters: {
+  "symbol": "EURUSD",
+  "direction": "buy",
+  "quantity": 0.001,
+  "entry_price": null,
+  "stop_loss": null,
+  "take_profit": null,
+  "risk_percent": 2.0,
+  "broker": "oanda"
+}
+2025-11-16 10:00:39 | INFO | 🧠 HIVE CONSENSUS on EURUSD: BUY with 78% confidence. Votes: ml_models: 75% | patterns: 81% | regime: 78%
+2025-11-16T21:26:21.694128Z VALIDATION: system check completed
+2025-11-17T01:03:16.156553Z VALIDATION: system check completed
+2025-11-17T13:28:56.686891Z VALIDATION: system check completed
+2025-11-17 16:56:20 | INFO | 📊 STATUS CHECK: Trading mode is PAPER_PRACTICE, system is ONLINE_AUTONOMOUS, active brokers are OANDA, IBKR, COINBASE.
+2025-11-17 17:35:26 | INFO | 🟢 Position monitoring started
+2025-11-17 17:35:27 | INFO | 👤 MANUAL TRADE REQUESTED: EURUSD with parameters: {
+  "symbol": "EURUSD",
+  "direction": "buy",
+  "quantity": 15000,
+  "entry_price": 1.1,
+  "stop_loss": 1.09,
+  "take_profit": 1.14,
+  "risk_percent": 2.0,
+  "broker": "oanda"
+}
+2025-11-17 17:35:27 | INFO | 🧠 HIVE CONSENSUS on EURUSD: BUY with 78% confidence. Votes: ml_models: 75% | patterns: 81% | regime: 78%
+2025-11-17 17:36:38 | INFO | 🟢 Position monitoring started
+2025-11-17 17:36:39 | INFO | 👤 MANUAL TRADE REQUESTED: EURUSD with parameters: {
+  "symbol": "EURUSD",
+  "direction": "buy",
+  "quantity": 15000,
+  "entry_price": 1.1,
+  "stop_loss": 1.09,
+  "take_profit": 1.14,
+  "risk_percent": 2.0,
+  "broker": "oanda"
+}
+2025-11-17 17:36:39 | INFO | 🧠 HIVE CONSENSUS on EURUSD: BUY with 78% confidence. Votes: ml_models: 75% | patterns: 81% | regime: 78%
+2025-11-17 17:36:39 | INFO | ℹ️ MANUAL_TRADE_ROUTING: {
+  "symbol": "EURUSD",
+  "direction": "buy",
+  "quantity": 15000,
+  "broker": "oanda"
+}
+2025-11-17 17:36:39 | ERROR | ⚠️ ERROR [MANUAL_TRADE_EXECUTION_FAILED]: {'symbol': 'EURUSD', 'direction': 'buy', 'quantity': 15000, 'broker': 'oanda', 'error': 'PRACTICE API error: HTTP 400: {"errorMessage":"Invalid value specified for \'accountID\'"}'}
+2025-11-17 17:36:46 | INFO | 🔴 Position monitoring stopped
+2025-11-17 17:47:30 | INFO | 📊 STATUS CHECK: Trading mode is PAPER_PRACTICE, system is ONLINE_AUTONOMOUS, active brokers are OANDA, IBKR, COINBASE.
+2025-11-17 18:17:23 | ERROR | ⚠️ ERROR [OPERATOR_ACTION_ERROR]: 

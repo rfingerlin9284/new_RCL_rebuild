@@ -1,0 +1,226 @@
+{
+  "mode": {
+    "description": "Paper (practice/backtest) vs Live (real money) trading mode",
+    "active_mode": "paper",
+    "paper": {
+      "enabled": true,
+      "description": "Paper trading mode - same logic as live, no real money"
+    },
+    "live": {
+      "enabled": false,
+      "description": "Live trading mode - real money execution"
+    }
+  },
+
+  "execution": {
+    "paper": {
+      "execute_trades": true,
+      "real_money": false,
+      "starting_capital": 2271.38,
+      "broker_endpoint": "practice",
+      "order_execution": "simulated",
+      "position_tracking": "simulated",
+      "margin_calculation": "paper_rules",
+      "slippage_simulation": true,
+      "slippage_percent": 0.05,
+      "commission_percent": 0.0001
+    },
+    "live": {
+      "execute_trades": true,
+      "real_money": true,
+      "starting_capital": 2271.38,
+      "broker_endpoint": "live",
+      "order_execution": "real",
+      "position_tracking": "real",
+      "margin_calculation": "broker_rules",
+      "slippage_simulation": false,
+      "slippage_percent": 0.0,
+      "commission_percent": 0.0001
+    }
+  },
+
+  "trading_logic": {
+    "description": "Same trading logic for BOTH paper and live modes",
+    "autonomous_enabled": true,
+    "manual_approval_required": false,
+    "auto_execute_trades": true,
+    "hive_mind_collective": true,
+    "guardian_gates_enabled": true,
+    "charter_enforcement": true,
+    "pin_validation": 841921,
+    "position_manager_cycle": 60,
+    "risk_management": "2% per trade"
+  },
+
+  "brokers": {
+    "oanda": {
+      "enabled": true,
+      "paper": {
+        "mode": "practice",
+        "account_type": "demo"
+      },
+      "live": {
+        "mode": "live",
+        "account_type": "real"
+      },
+      "logic": "identical",
+      "order_types": ["market", "limit", "stop", "stop_limit", "oco"],
+      "instruments": ["forex", "cfds"]
+    },
+    "coinbase": {
+      "enabled": true,
+      "paper": {
+        "mode": "sandbox",
+        "account_type": "demo"
+      },
+      "live": {
+        "mode": "production",
+        "account_type": "real"
+      },
+      "logic": "identical",
+      "special_rules": [
+        "90% hive consensus for crypto trades (Gate 4)",
+        "Crypto-specific volatility adjustments",
+        "Sub-300ms execution target",
+        "Advanced order types (OCO support)"
+      ],
+      "order_types": ["market", "limit", "stop", "stop_limit", "oco"],
+      "instruments": ["crypto", "stables"]
+    },
+    "ibkr": {
+      "enabled": true,
+      "paper": {
+        "mode": "paper",
+        "account_type": "demo"
+      },
+      "live": {
+        "mode": "live",
+        "account_type": "real"
+      },
+      "logic": "identical",
+      "special_rules": [
+        "Futures-specific margin requirements",
+        "Advanced order types (conditional orders)",
+        "Portfolio margin support",
+        "Multi-currency settlement"
+      ],
+      "order_types": ["market", "limit", "stop", "stop_limit", "conditional"],
+      "instruments": ["forex", "futures", "stocks", "options"]
+    }
+  },
+
+  "charter_and_gates": {
+    "description": "Same charter enforcement for BOTH modes",
+    "pin": 841921,
+    "universal_rules": {
+      "min_notional_usd": 15000,
+      "max_hold_duration_hours": 6,
+      "min_risk_reward_ratio": 3.2,
+      "max_concurrent_positions": 3,
+      "daily_loss_breaker_percent": -5.0,
+      "max_leverage": 1.0
+    },
+    "guardian_gates": {
+      "gate_1": {
+        "name": "Margin Utilization",
+        "threshold": "≤35% NAV",
+        "applies_to": ["paper", "live"]
+      },
+      "gate_2": {
+        "name": "Concurrent Positions",
+        "threshold": "<3 positions",
+        "applies_to": ["paper", "live"]
+      },
+      "gate_3": {
+        "name": "Correlation Guard",
+        "threshold": "no same-side USD",
+        "applies_to": ["paper", "live"]
+      },
+      "gate_4": {
+        "name": "Crypto Consensus",
+        "threshold": "≥90% hive if crypto",
+        "applies_to": ["paper", "live"]
+      }
+    },
+    "logic_enforcement": "AND (all gates must pass)",
+    "applies_equally": "paper and live modes execute identical gate logic"
+  },
+
+  "position_manager": {
+    "description": "60-second autonomous reassessment cycle - identical for both modes",
+    "cycle_seconds": 60,
+    "autonomous_actions": [
+      "HOLD",
+      "TAKE_PROFIT",
+      "STOP_LOSS",
+      "TIGHTEN_STOP",
+      "TRAIL_STOP",
+      "APPLY_HEDGE",
+      "REDUCE",
+      "ADD",
+      "EVALUATE_EXIT"
+    ],
+    "applies_to": ["paper", "live"]
+  },
+
+  "narration_logging": {
+    "description": "Plain English event logging - identical for both modes",
+    "enabled": true,
+    "log_file": "logs/narration.log",
+    "events_logged": [
+      "TRADE_INITIATED",
+      "ORDER_PLACED",
+      "POSITION_MANAGED",
+      "GATE_REJECTED",
+      "MARGIN_WARNING",
+      "HIVE_CONSENSUS",
+      "AUTONOMOUS_ACTION",
+      "CHARTER_VIOLATION",
+      "PROFIT_TAKEN",
+      "STOP_HIT",
+      "HEDGE_APPLIED",
+      "CYCLE_COMPLETE"
+    ],
+    "applies_to": ["paper", "live"]
+  },
+
+  "risk_management": {
+    "description": "Same risk rules for BOTH modes",
+    "per_trade_risk": "2%",
+    "max_daily_loss": "-5%",
+    "position_sizing": "Kelly Criterion with 2% cap",
+    "leverage_allowed": "1.0x (no margin for crypto)",
+    "stop_loss_required": true,
+    "risk_reward_minimum": "3.2:1",
+    "applies_equally": "paper and live"
+  },
+
+  "capital_tracking": {
+    "starting_capital": 2271.38,
+    "monthly_addition": 1000.00,
+    "position_tracking": "identical for paper and live",
+    "pnl_calculation": "identical for paper and live"
+  },
+
+  "switching_between_modes": {
+    "instructions": "Change 'active_mode' from 'paper' to 'live' or vice versa",
+    "step_1": "Update config: 'active_mode': 'live'",
+    "step_2": "All trading logic remains IDENTICAL",
+    "step_3": "Brokers switch endpoints (practice → live)",
+    "step_4": "Position manager continues 60-second cycle",
+    "step_5": "Guardian gates enforce identical rules",
+    "step_6": "Narration logs all events identically",
+    "important": "No code changes needed - only config change"
+  },
+
+  "testing_recommendation": {
+    "step_1": "Run extensive paper mode testing (1-2 weeks minimum)",
+    "step_2": "Verify all 9 systems passing with validate_system.py",
+    "step_3": "Monitor narration logs for proper event logging",
+    "step_4": "Test position manager 60-second cycles",
+    "step_5": "Verify guardian gates rejecting invalid trades",
+    "step_6": "Confirm charter PIN 841921 enforcement",
+    "step_7": "Only then switch active_mode to 'live'",
+    "result": "Live mode trades with identical logic, just real money"
+  }
+}

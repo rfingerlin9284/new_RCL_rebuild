@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../R_H_UNI"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

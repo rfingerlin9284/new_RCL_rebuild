@@ -1,0 +1,89 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Validate System",
+      "type": "shell",
+      "command": "python3 validate_system.py",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Start CLI (Autostart 1,3,5,6)",
+      "type": "shell",
+      "command": "python3 rick_cli.py --autostart",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Hive Manual Terminal",
+      "type": "shell",
+      "command": "python3 ui/hive_terminal.py",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Hive Web Interface",
+      "type": "shell",
+      "command": "python3 ui/hive_web.py",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Start CLI (Paper Mode)",
+      "type": "shell",
+      "command": "python3 rick_cli.py",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Position Manager",
+      "type": "shell",
+      "command": "python3 position_manager.py",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Aggressive Engine",
+      "type": "shell",
+      "command": "python3 aggressive_money_machine.py",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Master Execution (Options A,C,D)",
+      "type": "shell",
+      "command": "bash MASTER_EXECUTION_A_C_D.sh",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Integrate Priority 3 Components",
+      "type": "shell",
+      "command": "python3 option_c_priority3_integration.py",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Copy Documentation (Option D)",
+      "type": "shell",
+      "command": "bash option_d_copy_documentation.sh",
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Tail Narration Log",
+      "type": "shell",
+      "command": "tail -f logs/narration.log",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    },
+    {
+      "label": "Switch To Live (Edit Config)",
+      "type": "shell",
+      "command": "echo 'Edit config/PAPER_LIVE_CONFIG.json: active_mode -> live' && ls config/PAPER_LIVE_CONFIG.json",
+      "options": {"cwd": "${workspaceFolder}/RICK_LIVE_CLEAN"},
+      "problemMatcher": []
+    }
+  ]
+}
